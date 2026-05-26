@@ -1,11 +1,13 @@
 name: canary
-  on:
-    push:
-      branches: [main]
-    workflow_dispatch:
-  jobs:
-    canary:
-      runs-on: ubuntu-latest
-      steps:
-        - name: echo canary
-          run: echo "canary OK from $(hostname) at $(date -u)"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo canary
+        run: echo "canary OK from $(hostname) at $(date -u)"
