@@ -1,0 +1,10 @@
+name: octoforge-smoke
+on:
+  workflow_dispatch:
+  push:
+    branches: [ feature/octoforge-smoke ]
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "smoke test"
